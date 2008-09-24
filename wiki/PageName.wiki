@@ -1,4 +1,3 @@
-
 C# IAXClient Wrapper
 
 Asteria Solutions Group is pleased to announce the first release of the C# IAXClient Wrapper. for vs.NET 2005.
@@ -18,27 +17,17 @@ Download Source
 
 We plan on releasing the source code to a simple softphone utilizing this wrapper very soon. Until then here's a quick start guide:
 
-   1.
-      //Create a new instance of the IAXClient
-   2.
-      IAXClient iax = new IAXClient();
-   3.
-       
-   4.
-      //initialize 4 lines
-   5.
-      iax.initialize(4);
-   6.
-      //register with the Asterisk (or whatever) server
-   7.
-      iax.register("user1", "pass1", "192.168.1.1");
-   8.
-      //Create an event handler to handle the Call State Events.
-   9.
-      iax.IAXCallStateEvent += new IAXClient.IAXCallStateEventHandler(HandleIAXCallStateEvent);
-  10.
-       
-  11.
-      //Place a call with the wrapper
-  12.
-      int callno = iax.placeCall("user1:pass1@192.168.1.1/18005551212");
+  //Create a new instance of the IAXClient
+  IAXClient iax = new IAXClient();
+
+  //initialize 4 lines
+  iax.initialize(4);
+
+  //register with the Asterisk (or whatever) server
+  iax.register("user1", "pass1", "192.168.1.1");
+
+  //Create an event handler to handle the Call State Events.
+  iax.IAXCallStateEvent += new IAXClient.IAXCallStateEventHandler(HandleIAXCallStateEvent);
+
+  //Place a call with the wrapper
+  int callno = iax.placeCall("user1:pass1@192.168.1.1/18005551212");
